@@ -2,52 +2,6 @@
 <html lang="en">
 
 <head>
-  <style>
-    /* CSS-Styles für die Schneeflocken */
-    .snowflake {
-      position: absolute;
-      z-index: -1;
-      pointer-events: none;
-    }
-  </style>
-</head>
-<body>
-  <div id="content">
-    <!-- Inhalt Ihrer Webseite hier -->
-  </div>
-  <script>
-    // Array mit Schneeflocken-Objekten
-    var snowflakes = [];
-    // Anzahl der Schneeflocken
-    var snowflakeCount = 100;
-    // Erstellen der Schneeflocken
-    for (var i = 0; i < snowflakeCount; i++) {
-      var snowflake = document.createElement("div");
-      snowflake.classList.add("snowflake");
-      snowflake.style.left = Math.random() * window.innerWidth + "px";
-      snowflake.style.top = Math.random() * window.innerHeight + "px";
-      snowflake.innerHTML = "❄️";
-      document.body.appendChild(snowflake);
-      snowflakes.push(snowflake);
-    }
-    // Animieren der Schneeflocken
-    setInterval(animateSnowflakes, 50);
-    function animateSnowflakes() {
-      for (var i = 0; i < snowflakes.length; i++) {
-        var snowflake = snowflakes[i];
-        snowflake.style.top = snowflake.offsetTop + 1 + "px";
-        snowflake.style.left = snowflake.offsetLeft + Math.random() - 0.5 + "px";
-        // Wenn die Schneeflocke das untere Ende des Fensters erreicht hat, setze sie zurück nach oben
-        if (snowflake.offsetTop > window.innerHeight) {
-          snowflake.style.top = "-10px";
-          snowflake.style.left = Math.random() * window.innerWidth + "px";
-        }
-      }
-    }
-  </script>
-
-
-<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,6 +9,7 @@
 </head>
 
 <body>
+  Hallo
 
     <canvas id="canvas" width="480" height="480"></canvas>
 
