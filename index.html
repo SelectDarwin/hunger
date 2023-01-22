@@ -6,21 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake</title>
- 
 </head>
-  
-    
-</html>
 
 <body>
-      Solche Spiele zu programmieren, ist Teil des Unterrichts an der HBG. Die Einbettung in eine Webseite ist trivial, würde aber Zeit kosten. Diese Aufgabe kann GPT für die SuS übernehmen
-
+Solche Spiele zu programmieren, ist Teil des Unterrichts an der HBG. Die Einbettung in eine Webseite ist trivial, würde aber Zeit kosten. Diese Aufgabe kann GPT für die SuS übernehmen
     <canvas id="canvas" width="480" height="480"></canvas>
 
     <script>
         let canvas = document.getElementById('canvas');
         let ctx = canvas.getContext('2d');
-       
         let rows = 20;
         let cols = 20;
         let snake = [{
@@ -44,14 +38,14 @@
         draw();
 
         function draw() {
-            ctx.fillStyle = 'white';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
             ctx.fillStyle = 'black';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = 'white';
 
 
             snake.forEach(part => add(part.x, part.y));
 
-            ctx.fillStyle = 'red';
+            ctx.fillStyle = 'yellow';
             add(food.x, food.y); // Food
 
             requestAnimationFrame(draw);
@@ -161,3 +155,5 @@
 </body>
 
 </html>
+
+      
